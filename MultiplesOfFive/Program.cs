@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace MultiplesOfFive
 {
-    class Program
+    public class CSharpChallenge
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            string multiples = "";
+            foreach (int i in Enumerable.Range(1, 99))
+            {
+                multiples += (i * 5);
+                multiples += " ";
+            }
+            multiples = multiples.Remove(multiples.Length - 1, 1);
+            Console.Write(multiples);
         }
     }
 }
